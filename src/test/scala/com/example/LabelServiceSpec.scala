@@ -6,10 +6,10 @@ import spray.http._
 import StatusCodes._
 
 
-class MyServiceSpec extends Specification with Specs2RouteTest with MyService {
+class LabelServiceSpec extends Specification with Specs2RouteTest with LabelService {
   def actorRefFactory = system
   
-  "MyService" should {
+  "LabelService" should {
 
     "return a greeting for GET requests to the root path" in {
       Get() ~> myRoute ~> check {
